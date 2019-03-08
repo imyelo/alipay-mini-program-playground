@@ -1,6 +1,6 @@
 <template>
   <view>
-    <view>Page B</view>
+    <view>Page D</view>
     <button onTap="onTapButton">Back to A</button>
   </view>
 </template>
@@ -11,11 +11,11 @@ import io from '@/libraries/io'
 
 export default {
   async onLoad () {
-    await io.showLoading({
-      content: 'Loading from B',
+    await this.$loading.show({
+      content: 'Loading from D',
     })
     await delay(1000)
-    await io.hideLoading()
+    await this.$loading.hide()
   },
   
   methods: {

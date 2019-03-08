@@ -3,7 +3,8 @@
   "pages": [
     "pages/a/index.mina",
     "pages/b/index.mina",
-    "pages/c/index.mina"
+    "pages/c/index.mina",
+    "pages/d/index.mina"
   ],
   "tabBar": {
     "items": [
@@ -24,7 +25,12 @@
 </config>
 
 <script>
-App({})
+import Tina from 'Tina'
+import loading from '@/plugins/loading'
+
+Tina.use(loading)
+
+export default {}
 </script>
 
 <style>

@@ -1,7 +1,8 @@
 <template>
   <view>
     <view>Page A</view>
-    <button onTap="onTapButton">Scan any QRCode and Navigate to B</button>
+    <button onTap="onTapButtonB">Scan any QRCode and Navigate to B</button>
+    <button onTap="onTapButtonD">Scan any QRCode and Navigate to D</button>
   </view>
 </template>
 
@@ -16,16 +17,26 @@ async function scan () {
   } catch (error) {}
 }
 
-Page({
-  async onTapButton () {
-    await io.showLoading({
-      content: 'Loading from A',
-    })
-    await scan()
-    await io.hideLoading()
-    await io.navigateTo({ url: '/pages/b/index' })
+export default {
+  methods: {
+    async onTapButtonB () {
+      await io.showLoading({
+        content: 'Loading from A',
+      })
+      await scan()
+      await io.hideLoading()
+      await io.navigateTo({ url: '/pages/b/index' })
+    },
+    async onTapButtonD () {
+      await io.showLoading({
+        content: 'Loading from A',
+      })
+      await scan()
+      await io.hideLoading()
+      await io.navigateTo({ url: '/pages/d/index' })
+    },
   },
-})
+}
 </script>
 
 <style>

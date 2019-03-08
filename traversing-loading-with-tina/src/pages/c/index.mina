@@ -8,7 +8,7 @@
 import delay from 'delay'
 import io from '@/libraries/io'
 
-Page({
+export default {
   async onShow () {
     await io.showLoading({
       content: 'Loading from C',
@@ -16,7 +16,7 @@ Page({
     await delay(100)
     await io.hideLoading()
   },
-})
+}
 </script>
 
 <style>
