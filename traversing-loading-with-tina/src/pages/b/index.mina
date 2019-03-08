@@ -1,0 +1,31 @@
+<template>
+  <view>
+    <view>Page B</view>
+    <button onTap="onTapButton">Back to A</button>
+  </view>
+</template>
+
+<script>
+import delay from 'delay'
+import io from '@/libraries/io'
+
+Page({
+  async onLoad () {
+    await io.showLoading({
+      content: 'Loading from B',
+    })
+    await delay(1000)
+    await io.hideLoading()
+  },
+
+  onTapButton () {
+    io.navigateBack()
+  },
+})
+</script>
+
+<style>
+page {
+  background-color: #eeeeee;
+}
+</style>

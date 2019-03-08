@@ -1,0 +1,61 @@
+{
+  "name": "traversing-loading-with-tina",
+  "version": "0.0.0",
+  "private": true,
+  "description": "traversing-loading with tina",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:imyelo/alipay-mini-program-playground.git"
+  },
+  "keywords": [],
+  "author": "yelo <zhihzueye@gmail.com>",
+  "scripts": {
+    "clean": "rimraf \"./dist/!(assets)*/!(app.json)**\"",
+    "precommit": "lint-staged",
+    "prestart": "run-s clean",
+    "prebuild": "run-s clean",
+    "start": "webpack -w",
+    "build": "cross-env NODE_ENV=production webpack",
+    "upload:assets": "alioss"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.1.0",
+    "@babel/plugin-proposal-class-properties": "^7.1.0",
+    "@babel/plugin-proposal-decorators": "^7.3.0",
+    "@babel/plugin-proposal-export-default-from": "^7.0.0",
+    "@babel/plugin-proposal-function-bind": "^7.2.0",
+    "@babel/plugin-proposal-optional-chaining": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.1.0",
+    "@babel/preset-env": "^7.1.0",
+    "@babel/runtime-corejs2": "^7.0.0",
+    "@tinajs/mina-entry-webpack-plugin": "^1.0.16",
+    "@tinajs/mina-loader": "^1.4.2",
+    "@tinajs/mina-runtime-webpack-plugin": "^1.1.0",
+    "@tinajs/translator-ant": "^0.0.3",
+    "@tinajs/wxml-loader": "0.3.1-fork.1",
+    "@yelo/alioss-cli": "^2.0.0",
+    "babel-loader": "^8.0.4",
+    "cross-env": "^5.1.1",
+    "cz-conventional-changelog": "^2.0.0",
+    "file-loader": "^1.1.11",
+    "git-rev-sync": "^1.12.0",
+    "lint-staged": "^7.2.0",
+    "npm-run-all": "^4.1.1",
+    "postcss-calc": "^6.0.1",
+    "postcss-color-function": "^4.0.0",
+    "postcss-loader": "^2.1.3",
+    "postcss-px2units": "^0.1.1",
+    "postcss-url": "^7.3.1",
+    "precss": "^2.0.0",
+    "prettier": "^1.13.7",
+    "relative-file-loader": "^1.1.12",
+    "rimraf": "^2.6.2",
+    "webpack": "^4.23.0",
+    "webpack-cli": "^3.1.0"
+  },
+  "dependencies": {
+    "@tinajs/tina": "^2.0.0-alpha.2",
+    "delay": "^4.1.0",
+    "map-obj": "^3.0.0"
+  }
+}

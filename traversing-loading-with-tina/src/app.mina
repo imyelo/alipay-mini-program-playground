@@ -1,0 +1,45 @@
+<config>
+{
+  "pages": [
+    "pages/a/index.mina",
+    "pages/b/index.mina",
+    "pages/c/index.mina"
+  ],
+  "tabBar": {
+    "items": [
+      {
+        "pagePath": "pages/a/index",
+        "name": "Page A"
+      },
+      {
+        "pagePath": "pages/c/index",
+        "name": "Page C"
+      }
+    ]
+  },
+  "window": {
+    "defaultTitle": "Traversing Loading"
+  }
+}
+</config>
+
+<script>
+App({})
+</script>
+
+<style>
+page {
+  display: flex;
+  flex-direction: column;
+  background: #f7f7f7;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+}
+
+button {
+  margin: 1em;
+  padding: 0 2em;
+}
+</style>

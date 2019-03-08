@@ -1,0 +1,35 @@
+<template>
+  <view>
+    <view>Page A</view>
+    <button onTap="onTapButton">Scan any QRCode and Navigate to B</button>
+  </view>
+</template>
+
+<script>
+import delay from 'delay'
+import io from '@/libraries/io'
+
+async function scan () {
+  try {
+    let { code } = await io.scan()
+    return code
+  } catch (error) {}
+}
+
+Page({
+  async onTapButton () {
+    await io.showLoading({
+      content: 'Loading from A',
+    })
+    await scan()
+    await io.hideLoading()
+    await io.navigateTo({ url: '/pages/b/index' })
+  },
+})
+</script>
+
+<style>
+page {
+  background-color: #fff;
+}
+</style>

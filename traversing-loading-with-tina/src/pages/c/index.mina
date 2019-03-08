@@ -1,0 +1,26 @@
+<template>
+  <view>
+    <view>Page C</view>
+  </view>
+</template>
+
+<script>
+import delay from 'delay'
+import io from '@/libraries/io'
+
+Page({
+  async onShow () {
+    await io.showLoading({
+      content: 'Loading from C',
+    })
+    await delay(100)
+    await io.hideLoading()
+  },
+})
+</script>
+
+<style>
+page {
+  background-color: #dddddd;
+}
+</style>
