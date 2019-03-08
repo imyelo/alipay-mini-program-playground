@@ -1,4 +1,4 @@
 <view>
   <view>Page A</view>
-  <button onTap="onTapButton">Navigate to B</button>
+  <button onTap="onTapButton">Scan any QRCode and Navigate to B</button>
 </view>
