@@ -1,0 +1,4 @@
+<view>
+  <view>Page B</view>
+  <button onTap="onTapButton">Back to A</button>
+</view>

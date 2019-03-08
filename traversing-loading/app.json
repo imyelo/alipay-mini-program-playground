@@ -1,0 +1,22 @@
+{
+  "pages": [
+    "pages/a/index",
+    "pages/b/index",
+    "pages/c/index"
+  ],
+  "tabBar": {
+    "items": [
+      {
+        "pagePath": "pages/a/index",
+        "name": "Page A"
+      },
+      {
+        "pagePath": "pages/c/index",
+        "name": "Page C"
+      }
+    ]
+  },
+  "window": {
+    "defaultTitle": "Traversing Loading"
+  }
+}
